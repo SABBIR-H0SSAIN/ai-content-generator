@@ -1,0 +1,30 @@
+{
+  "navLinks": [
+    {
+      "href": "#features",
+      "label": "Features"
+    },
+    {
+      "href": "#how-it-works",
+      "label": "How It Works"
+    },
+    {
+      "href": "/templates/explore",
+      "label": "Templates"
+    }
+  ],
+  "ctaButtons": [
+    {
+      "href": "/sign-in",
+      "label": "Sign In",
+      "variant": "ghost",
+      "className": "text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400"
+    },
+    {
+      "href": "/sign-in",
+      "label": "Get Started",
+      "variant": "default",
+      "className": "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+    }
+  ]
+}
