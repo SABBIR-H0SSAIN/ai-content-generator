@@ -7,7 +7,7 @@ const TemplateExploreCard = ({ data }: { data: any }) => {
       <div className="h-full cursor-pointer flex flex-col justify-between p-4 max-w-[250px] shadow-lg rounded-md bg-white dark:bg-dark-3/80 hover:scale-105 transition-all duration-400">
         <div className="flex  justify-between ">
           <Image
-            src={data.icon || "/logo.svg"}
+            src={data.icon || "/icon_fallback.svg"}
             alt="logo"
             width={80}
             height={80}
