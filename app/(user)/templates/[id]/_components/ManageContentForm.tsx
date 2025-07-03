@@ -58,7 +58,10 @@ const ManageContentForm = ({
         balance={balance as number}
         updateBalance={updateBalance}
       />
-      <div className="flex-1 w-full sm:min-w-[400px]  max-xl:max-w-[500px] xl:h-full  overflow-y-scroll hide-scrollbar  shadow-lg mx-auto">
+      <div
+        id="ai-response"
+        className="flex-1 w-full sm:min-w-[400px]  max-xl:max-w-[500px] xl:h-full  overflow-y-scroll hide-scrollbar  shadow-lg mx-auto"
+      >
         <div className="flex flex-col gap-4 w-full mx-auto shadow-lg rounded-lg py-4 px-6 bg-card ">
           <div className="flex justify-between border-b-2 pb-4">
             <h1 className="text-2xl">Ai Response</h1>
@@ -75,6 +78,9 @@ const ManageContentForm = ({
                   Ai is Thinking...
                 </TextShimmerWave>
               </code>
+            )}
+            {state?.error && !loading && (
+              <span className="text-lg text-red-500">{state?.error}</span>
             )}
             <MarkdownRenderer
               content={loading ? "" : state?.data?.response || ""}

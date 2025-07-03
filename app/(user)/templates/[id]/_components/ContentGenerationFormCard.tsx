@@ -51,6 +51,18 @@ const ContentGenerationFormCard = ({
   });
   const [formState, setFormState] = useState<Record<string, string>>(inputs);
 
+  const handleSubmit = async (formData: FormData) => {
+    await action(formData);
+
+    const aiResponseElement = document.getElementById("ai-response");
+    if (aiResponseElement) {
+      aiResponseElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <div className="xl:sticky z-50 xl:top-0 shadow-lg mb-5 h-full rounded-lg gap-4 p-5 w-full lg:min-w-[400px] max-w-[450px] mx-auto  bg-card">
       <div className="flex flex-col gap-4">
@@ -59,7 +71,7 @@ const ContentGenerationFormCard = ({
         <p className="text-md text-gray-600 dark:text-gray-400">
           {template.description}
         </p>
-        <form action={action} className="flex flex-col gap-4">
+        <form action={handleSubmit} className="flex flex-col gap-4">
           {template.forms.map((input, index: number) => (
             <div key={index}>
               <FormInput
