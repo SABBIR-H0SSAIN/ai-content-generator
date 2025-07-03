@@ -4,7 +4,7 @@ import copy from "copy-to-clipboard";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism"; // Or duotoneDark if you prefer dark mode
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism"; 
 import remarkGfm from "remark-gfm";
 
 const MarkdownRenderer = ({ content }) => {
