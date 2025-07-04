@@ -15,13 +15,10 @@ An ai based sass application where user can create or share ai templates and gen
 - **Responsive Design**: A beautiful and responsive UI built with Tailwind CSS and Shadcn UI.
 - **Dark Mode Support**:User can Switch between light or dark modes or select the default system mode.
 
-##  App Demo
-
-
-*(Will be updated soon)*
-
-
-
+## 📽️ App Demo
+- Desktop view: [Click here](https://youtu.be/1QuXqCW5xP8?si=BlxXUY0EKsEwfDyi) 👈
+- Tablet View: (_will be updated soon_)
+- Mobile View: (_will be updated soon_)
 
 ## 🛠️ Tech Stack
 
