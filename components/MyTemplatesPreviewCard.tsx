@@ -24,7 +24,7 @@ const TemplateExploreCard = ({
       >
         <div className="flex  justify-between ">
           <Image
-            src={data.icon || "/logo.svg"}
+            src={data.icon || "/icon_fallback.svg"}
             alt="logo"
             width={80}
             height={80}
