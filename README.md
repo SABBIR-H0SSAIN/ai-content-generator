@@ -113,6 +113,6 @@ The following environment variables are required to run the application. You can
 
 If you found this project helpful or interesting, please consider giving it a ⭐️ 
 
-![GitHub Repo stars](https://img.shields.io/github/stars/SABBIR-H0SSAIN/Leetcode-solutions)
+![GitHub Repo stars](https://img.shields.io/github/stars/SABBIR-H0SSAIN/ai-content-generator)
 
 
