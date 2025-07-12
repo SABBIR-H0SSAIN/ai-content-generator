@@ -2,7 +2,7 @@ import { deleteAllIcons } from "@/lib/cloudinary";
 import * as fs from "fs";
 import * as path from "path";
 import { rimraf } from "rimraf";
-import { db, pool } from "./index";
+import { db } from "./index";
 import { CUSTOM_TYPES, TABLE_NAMES } from "./schemas";
 
 async function rollbackDatabase() {
@@ -67,7 +67,7 @@ async function main() {
     console.error("❌ Rollback failed:", error);
     process.exit(1);
   } finally {
-    await pool.end();
+    process.exit(0);
   }
 }
 
