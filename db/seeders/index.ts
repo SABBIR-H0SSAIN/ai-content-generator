@@ -1,4 +1,4 @@
-import { db, pool } from "@/db";
+import { db } from "@/db";
 import { randomId } from "@/lib/utils";
 import { templateSchema } from "../schemas";
 import { templateSeederData } from "./data";
@@ -27,6 +27,6 @@ const modifiedTemplateSeederData = [...templateSeederData].map((template) => ({
     console.error("❌ Seeding failed:", error);
     process.exit(1);
   } finally {
-    await pool.end();
+    process.exit(0);
   }
 })();
