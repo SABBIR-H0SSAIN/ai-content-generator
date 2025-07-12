@@ -43,7 +43,7 @@ const MobileNavbar = () => {
                 <span className="text-xl font-semibold">EasyAi</span>
               </SheetTitle>
             </SheetHeader>
-            <div className="flex flex-col gap-4 mt-8">
+            <div className="flex flex-col justify-center items-center gap-4 mt-8">
               {navData.navLinks.map((link, index) => (
                 <Link
                   key={index}

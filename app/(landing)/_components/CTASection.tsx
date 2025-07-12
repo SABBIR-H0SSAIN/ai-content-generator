@@ -24,15 +24,6 @@ const CTASection = () => {
                 Start Creating Now
               </Button>
             </Link>
-            <Link href="/templates/explore">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-slate-300 dark:border-slate-600 px-12 py-6 text-xl font-semibold rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 min-w-[280px]"
-              >
-                Browse Templates
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
