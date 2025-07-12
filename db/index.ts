@@ -5,6 +5,9 @@ import * as schema from "./schemas";
 
 export const pool = new Pool({
   connectionString: config.db.url,
+  ssl: {
+    rejectUnauthorized: false,
+  },
   max: 10,
 });
 
