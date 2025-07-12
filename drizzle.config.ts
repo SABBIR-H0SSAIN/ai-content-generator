@@ -1,6 +1,9 @@
 import { defineConfig } from "drizzle-kit";
 import { config } from "./config";
 
+if (!config.db.url) {
+  throw new Error("DATABASE_URL is not set");
+}
 
 export default defineConfig({
   schema: "./db/schemas",

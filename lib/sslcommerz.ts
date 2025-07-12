@@ -51,18 +51,7 @@ export const validatePayment = async (val_id: string) => {
       },
     });
     return response.data;
-  } catch (error: any) {
-    console.error("SSLCommerz Payment Error:", {
-      message: error.message,
-      status: error.response?.status,
-      statusText: error.response?.statusText,
-      data: error.response?.data,
-      config: {
-        url: error.config?.url,
-        method: error.config?.method,
-        headers: error.config?.headers,
-      },
-    });
+  } catch {
     return null;
   }
 };
