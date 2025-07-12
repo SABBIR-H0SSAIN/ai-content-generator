@@ -17,19 +17,23 @@ const CLOUDINARY_CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME;
 const CLOUDINARY_API_KEY = process.env.CLOUDINARY_API_KEY;
 const CLOUDINARY_API_SECRET = process.env.CLOUDINARY_API_SECRET;
 
-if (
-  !DATABASE_URL ||
-  !GEMINI_API_KEY ||
-  !GEMINI_MODEL_NAME ||
-  !SSLCOMMERZ_STORE_ID ||
-  !SSLCOMMERZ_STORE_PASSWORD ||
-  !BASE_URL ||
-  !SSLCOMMERZ_IPN_URL ||
-  !CLOUDINARY_CLOUD_NAME ||
-  !CLOUDINARY_API_KEY ||
-  !CLOUDINARY_API_SECRET
-) {
-  throw new Error("Kindly setup your envioronment variables correctly");
+const missingVars = [];
+if (!DATABASE_URL) missingVars.push("DATABASE_URL");
+if (!GEMINI_API_KEY) missingVars.push("GEMINI_API_KEY");
+if (!GEMINI_MODEL_NAME) missingVars.push("GEMINI_MODEL_NAME");
+if (!SSLCOMMERZ_STORE_ID) missingVars.push("SSLCOMMERZ_STORE_ID");
+if (!SSLCOMMERZ_STORE_PASSWORD) missingVars.push("SSLCOMMERZ_STORE_PASSWORD");
+if (!BASE_URL) missingVars.push("BASE_URL");
+if (!SSLCOMMERZ_IPN_URL) missingVars.push("SSLCOMMERZ_IPN_URL");
+if (!CLOUDINARY_CLOUD_NAME) missingVars.push("CLOUDINARY_CLOUD_NAME");
+if (!CLOUDINARY_API_KEY) missingVars.push("CLOUDINARY_API_KEY");
+if (!CLOUDINARY_API_SECRET) missingVars.push("CLOUDINARY_API_SECRET");
+
+if (missingVars.length > 0) {
+  console.error("Missing environment variables:", missingVars);
+  throw new Error(
+    `Missing required environment variables: ${missingVars.join(", ")}`
+  );
 }
 
 export const config = {
